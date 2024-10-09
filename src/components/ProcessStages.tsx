@@ -105,33 +105,35 @@ export default function ProcessStages() {
 
         <div className="flex flex-col lg:flex-row items-start justify-between space-y-12 lg:space-y-0 lg:space-x-8">
           <motion.div 
-            className="lg:w-1/3 space-y-4"
+            className="w-full lg:w-1/3 space-y-4"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
           >
-            {stages.map((stage, index) => (
-              <motion.div 
-                key={index}
-                className={`flex items-center space-x-4 p-4 rounded-lg cursor-pointer transition-all duration-300 ${
-                  activeStage === index ? `${stage.color} shadow-lg` : 'hover:bg-gray-100'
-                }`}
-                onClick={() => setActiveStage(index)}
-                variants={itemVariants}
-              >
-                <div className={`p-3 rounded-full ${activeStage === index ? 'bg-white' : stage.color}`}>
-                  <stage.icon className={`w-6 h-6 ${activeStage === index ? 'text-[#206d73]' : 'text-gray-600'}`} />
-                </div>
-                <div>
-                  <h3 className={`text-lg font-semibold ${activeStage === index ? 'text-[#206d73]' : 'text-gray-800'}`}>{stage.title}</h3>
-                </div>
-              </motion.div>
-            ))}
+            <div className="flex flex-row lg:flex-col overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 space-x-4 lg:space-x-0 lg:space-y-4">
+              {stages.map((stage, index) => (
+                <motion.div 
+                  key={index}
+                  className={`flex-shrink-0 w-48 lg:w-full flex items-center space-x-4 p-4 rounded-lg cursor-pointer transition-all duration-300 ${
+                    activeStage === index ? `${stage.color} shadow-lg` : 'hover:bg-gray-100'
+                  }`}
+                  onClick={() => setActiveStage(index)}
+                  variants={itemVariants}
+                >
+                  <div className={`p-3 rounded-full ${activeStage === index ? 'bg-white' : stage.color}`}>
+                    <stage.icon className={`w-6 h-6 ${activeStage === index ? 'text-[#206d73]' : 'text-gray-600'}`} />
+                  </div>
+                  <div>
+                    <h3 className={`text-lg font-semibold ${activeStage === index ? 'text-[#206d73]' : 'text-gray-800'}`}>{stage.title}</h3>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
           <motion.div 
-            className="lg:w-2/3"
+            className="w-full lg:w-2/3"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -145,7 +147,7 @@ export default function ProcessStages() {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative h-96">
+              <div className="relative h-64 md:h-96">
                 <Image 
                   src={stages[activeStage].image} 
                   alt={stages[activeStage].title}
@@ -154,14 +156,14 @@ export default function ProcessStages() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#206d73] to-transparent opacity-70"></div>
                 <div className="absolute bottom-6 left-6 text-white">
-                  <h3 className="text-3xl font-bold mb-2">{stages[activeStage].title}</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2">{stages[activeStage].title}</h3>
                   <p className="text-lg">Step {activeStage + 1} of 6</p>
                 </div>
               </div>
-              <div className="p-8">
-                <p className="text-xl text-gray-700 mb-6">{stages[activeStage].description}</p>
+              <div className="p-6 md:p-8">
+                <p className="text-lg md:text-xl text-gray-700 mb-6">{stages[activeStage].description}</p>
                 <motion.button 
-                  className="bg-[#206d73] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-colors shadow-lg"
+                  className="w-full md:w-auto bg-[#206d73] text-white px-6 py-3 md:px-8 md:py-4 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-colors shadow-lg"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
