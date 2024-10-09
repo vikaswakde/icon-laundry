@@ -124,14 +124,28 @@ export default function WhyChooseUs() {
               className="rounded-lg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#206d73] to-transparent opacity-50"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-10 bg-white bg-opacity-20 rounded-b-lg">
-              <p className="text-2xl md:text-3xl font-semibold mb-6 text-[#131e1f]">
-                &quot;We&apos;re not just cleaning clothes; we&apos;re caring for your wardrobe
-                with precision and passion.&quot;
-              </p>
-              <button className="bg-[#206d73] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#184f54] transition-colors shadow-lg">
-                Experience the Difference
-              </button>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <motion.div 
+                className="bg-white bg-opacity-80 p-8 rounded-lg shadow-xl max-w-2xl"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+              >
+                <svg className="w-12 h-12 text-[#206d73] mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+                <p className="text-2xl md:text-3xl font-semibold mb-6 text-[#206d73] italic">
+                  We&apos;re not just cleaning clothes; we&apos;re caring for your wardrobe
+                  with precision and passion.
+                </p>
+                <motion.button 
+                  className="bg-[#206d73] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#184f54] transition-colors shadow-lg"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Experience the Difference
+                </motion.button>
+              </motion.div>
             </div>
           </div>
         </motion.div>
