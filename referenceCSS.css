@@ -1,0 +1,620 @@
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+
+  font-family: "Lato", sans-serif;
+}
+
+@font-face {
+  font-family: "Lato";
+
+  src: url(../font/Lato-Black.ttf);
+
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Lato";
+
+  src: url(../font/Lato-Bold.ttf);
+
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Lato";
+
+  src: url(../font/Lato-Light.ttf);
+
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Lato";
+
+  src: url(../font/Lato-Regular.ttf);
+
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Lato";
+
+  src: url(../font/Lato-Thin.ttf);
+
+  font-weight: 100;
+}
+
+/* navbar start */
+
+.menubar {
+  background: linear-gradient(144.89deg, #206d73 -3.68%, #020808 99.03%);
+
+  padding: absolute;
+}
+
+.sticky_navbar {
+  position: fixed !important;
+
+  width: 100%;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  background: linear-gradient(144.89deg, #206d73 -3.68%, #020808 100%);
+
+  z-index: 99;
+}
+
+.menubar a {
+  color: white;
+
+  font-weight: 400;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: #fff !important;
+}
+
+.logo_img {
+  width: 12%;
+}
+
+.menu_btn button {
+  color: rgb(32, 109, 115);
+}
+
+/* navbar end */
+
+/* headerbanner Start */
+
+.header_banner {
+  background: linear-gradient(144.89deg, #206d73 -3.68%, #020808 99.03%);
+}
+
+.banner_img img {
+  width: 90%;
+}
+
+.banner_content h1 {
+  font-weight: 700;
+}
+
+.banner_content span {
+  color: #ffba53;
+
+  font-weight: 700;
+}
+
+.banner_content p {
+  color: #d2dfdf;
+
+  font-weight: 400;
+}
+
+/* headerbanner End */
+
+/* About us start */
+
+.about_us {
+  background: #f5f9fa;
+}
+
+.about_content h2 {
+  color: #0c474d;
+
+  font-weight: 700;
+}
+
+.about_content p {
+  color: #3f3f3f;
+
+  font-weight: 400;
+}
+
+.about_height {
+  background: #e7f1f3;
+
+  border-radius: 6px;
+}
+
+.vl {
+  border-left: 6px solid #0c474d;
+
+  height: 64px;
+}
+
+.about_height p {
+  color: #3f3f3f;
+
+  font-size: 18px;
+
+  font-weight: 400;
+}
+
+.about_iinement p {
+  font-weight: 400;
+}
+
+/* About us end */
+
+/*  why choose start  */
+
+.choose_heading h2 {
+  color: #0c474d;
+
+  font-weight: 900;
+}
+
+.choose_heading p {
+  color: #3f3f3f;
+
+  font-weight: 400;
+}
+
+.pickup h4 {
+  color: #202020;
+
+  font-weight: 700;
+}
+
+.pickup p {
+  color: #3f3f3f;
+
+  font-weight: 400;
+}
+
+/*  why choose finish */
+
+/* laundry service start */
+
+.laundry_service {
+  background: linear-gradient(144.89deg, #206d73 -3.68%, #020808 99.03%);
+}
+
+.laundryheading h2 {
+  font-weight: 700;
+}
+
+.laundryheading span {
+  color: #ffba53;
+}
+
+.laundryheading p {
+  color: #d2dfdf;
+
+  font-weight: 400;
+}
+
+.laundry_icon img {
+  height: 25px;
+}
+
+.laundry_icon p {
+  font-weight: 400;
+}
+
+.washfold {
+  height: 190px;
+
+  margin: 10px 0;
+}
+
+.washfold p {
+  font-weight: 400;
+}
+
+.washfold img {
+  background-color: #0d2e30;
+
+  border-radius: 100%;
+
+  padding: 40px;
+}
+
+/* laundry service finish */
+
+/* request form start */
+
+.request_services {
+  background: linear-gradient(
+    179.97deg,
+    rgba(245, 249, 250, 0) 0.02%,
+
+    rgba(245, 249, 250, 0.83) 9.14%,
+
+    rgba(245, 249, 250, 0.97) 16.7%,
+
+    #f5f9fa 23.68%,
+
+    #f5f9fa 99.98%
+  );
+}
+
+.request_form h2 {
+  color: #0c474d;
+
+  font-weight: 700;
+}
+
+.request_form p {
+  color: #3f3f3f;
+
+  font-weight: 400;
+}
+
+.form_submit {
+  background-color: #0c474d !important;
+
+  margin-top: 16px;
+}
+
+/* request form finish */
+
+/* footer start */
+
+.footer_nav {
+  background: #0c474d;
+}
+
+.quicklink h5 {
+  font-weight: 700;
+}
+
+.quick_link ul {
+  padding-left: 0px !important;
+}
+
+.quick_link ul li {
+  list-style: none;
+
+  margin: 8px 0;
+}
+
+.quick_link ul li a {
+  text-decoration: none;
+
+  font-size: 16px;
+
+  color: #fff;
+
+  font-weight: 400;
+}
+
+.contact_link ul li {
+  list-style: none;
+
+  margin: 8px 0;
+}
+
+.contact_info h5 {
+  font-weight: 700;
+}
+
+.contact_link ul li a {
+  text-decoration: none;
+
+  color: #fff;
+
+  font-weight: 400;
+}
+
+.social_link h5 {
+  font-weight: 700;
+}
+
+.sociallinkitem span {
+  margin: 0 5px;
+}
+
+.download_app h5 {
+  font-weight: 700;
+}
+
+.download_icon {
+  display: flex;
+
+  padding-top: 15px;
+}
+
+.pureend h4 {
+  color: #202020;
+
+  font-weight: 400;
+
+  font-size: 16px;
+}
+
+/* footer finish */
+
+/* media Query start */
+
+@media all and (min-width: 992px) and (max-width: 1190px) {
+  .about_shotimg {
+    flex-direction: column;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .banner_content h1 {
+    font-size: 30px;
+  }
+
+  .banner_content p {
+    font-size: 13px;
+  }
+
+  .banner_app {
+    width: 95%;
+
+    display: flex;
+  }
+
+  .about_content h2 {
+    font-size: 22px;
+  }
+
+  .about_content p {
+    font-size: 14px;
+  }
+
+  .about_shotimg {
+    flex-direction: column;
+  }
+
+  .about_shotimg img {
+    padding: 5px 0;
+  }
+
+  .download_icon img {
+    padding: 5px 0;
+  }
+
+  .pickup p {
+    font-size: 14px;
+  }
+
+  .s2img img {
+    margin: 5px 0 !important;
+  }
+
+  .contact_link span {
+    font-size: 12px;
+  }
+
+  .request_form {
+    padding: 15px;
+  }
+
+  .quicklink h5 {
+    font-size: 16px;
+  }
+
+  .contact_info h5 {
+    font-size: 16px;
+  }
+
+  .social_link h5 {
+    font-size: 16px;
+  }
+
+  .download_app h5 {
+    font-size: 16px;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+  .logimg a {
+    width: 45% !important;
+  }
+
+  .banner_content h1 {
+    font-size: 18px;
+
+    padding-left: 10px;
+
+    margin-bottom: 0px !important ;
+  }
+
+  .banner_content p {
+    font-size: 11px;
+
+    padding-left: 10px;
+
+    padding-top: 10px;
+  }
+
+  .banner_app {
+    display: flex;
+  }
+
+  .banner_app img {
+    padding: 8px 5px;
+  }
+
+  .about_text {
+    order: 2 !important;
+  }
+
+  .about_laundry {
+    order: 1 !important;
+  }
+
+  .about_content h2 {
+    font-size: 19px;
+  }
+
+  .choose_heading p {
+    font-size: 13px;
+  }
+
+  .about_content p {
+    font-size: 13px;
+  }
+
+  .laundry_icon p {
+    padding: 0 15px;
+  }
+
+  .washfold {
+    margin: 10px 0;
+  }
+
+  .about_shotimg {
+    flex-direction: column;
+
+    padding: 5px 0;
+  }
+
+  .request_form {
+    padding: 20px;
+  }
+
+  .form-group {
+    padding: 5px 0;
+  }
+
+  .download_icon {
+    width: 48%;
+  }
+
+  .download_app h5 {
+    padding-top: 15px;
+  }
+
+  .download_icon img {
+    padding: 5px 5px;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 500px) {
+  .logimg a {
+    width: 45% !important;
+  }
+
+  .banner_content h1 {
+    font-size: 18px;
+
+    padding-left: 10px;
+
+    margin-bottom: 0px !important ;
+  }
+
+  .banner_content p {
+    font-size: 11px;
+
+    padding-left: 10px;
+
+    padding-top: 10px;
+  }
+
+  .banner_app {
+    display: flex;
+  }
+
+  .banner_app img {
+    padding: 8px 5px;
+  }
+
+  .about_text {
+    order: 2 !important;
+  }
+
+  .about_laundry {
+    order: 1 !important;
+  }
+
+  .about_content h2 {
+    font-size: 19px;
+  }
+
+  .choose_heading p {
+    font-size: 13px;
+  }
+
+  .about_content p {
+    font-size: 13px;
+  }
+
+  .laundry_icon p {
+    padding: 0 15px;
+  }
+
+  .washfold {
+    margin: 10px 0;
+  }
+
+  .about_shotimg {
+    flex-direction: column;
+
+    padding: 5px 0;
+  }
+
+  .request_form {
+    padding: 20px;
+  }
+
+  .form-group {
+    padding: 5px 0;
+  }
+
+  .download_icon {
+    width: 48%;
+  }
+
+  .download_app h5 {
+    padding-top: 15px;
+  }
+
+  .download_icon img {
+    padding: 5px 5px;
+  }
+}
+
+/* media query finish */
+
+/* Add this to your existing CSS */
+.navbar-nav {
+  display: flex;
+  align-items: center; /* Center align nav items vertically */
+}
+
+.nav-item {
+  margin-right: 20px; /* Space between nav items */
+}
+
+.custom-white-btn {
+  padding: 10px 15px; /* Adjust padding to match other buttons */
+  display: inline-flex; /* Ensures it can align with other nav items */
+  align-items: center; /* Vertically centers the button text */
+}

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icon Laundry</title>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- bootstrap css link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"> </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3/dist/js.cookie.min.js"></script>
+  </head>
+  <style>
+    .modal{top:10% !important;}
+    .custom-white-btn {
+  margin-bottom : 1rem;
+  border: 2px solid black; /* Optional black border */
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 20px;    
+  display: flex;
+  align-items: center;
+  text-align: center;
+      
+}
+
+
+  
+ </style>
+  <body>
+    <!-- navbar start -->
+    <header class="menubar">
+      <nav class="navbar navbar-expand-lg sticky_navbar">
+        <div class="container logimg">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./assets/img/logo1.png"
+              alt="logo"
+              class="img-fluid logo_img"
+            />
+          </a>
+          <button
+            class="navbar-toggler custom-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+              <!-- Update this part of your navbar in index.html -->
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-3">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#aboutus">About us</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#why_choose">Why us?</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#laundryservice">Our Services</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#requestservice">Contact us</a>
+  </li>
+  <li class="nav-item">
+<a class="custom-white-btn " href="#" data-toggle="modal" data-target="#fabkleanStore" 
+   style="background: white; color: black; text-decoration: none;" >
+   Book Now
+</a>
+
+  </li>
+</ul>
+
+            
+            
+          </div>
+        </div>
+      </nav>
+      <div class="row align-items-center">
+        <div class="col-md-6 col-lg-6 col-xl-6">
+          <div class="banner_img">
+            <img
+              src="./assets/img/banner_img.png"
+              alt="image"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-6">
+          <div class="banner_content">
+            <h1 class="text-white">Do Your <span>Laundry</span> Smartly!</h1>
+            <p class="mb-0">
+              Your Laundry gets delivered to your preferred experts in a
+              click.
+            </p>
+            <p class="pb-3">
+              Clever Laundry Solutions: Discover the Art of Smart Laundry.<br>
+              From quick hacks to high-tech innovations, we've got your <br>
+              laundry covered with intelligence and ease.<br>
+            </p>
+            <h1 class="text-white pb-2">DOWNLOAD THE APP</h1>
+            <p>
+              Discover efficient ways to tackle your laundry. Optimize your <br>
+              routine, save time, and achieve cleaner, fresher results with
+              ease.
+            </p>
+            <div class="banner_app">
+              <a href="https://play.google.com/store/apps/details?id=app.iawebtech.iconlaundry&hl=en"> <img
+                src="./assets/img/Play Store.png"
+                alt="img"
+                class="img-fluid"
+              /></a>
+             <a href="https://iconlaundry.in/BookNow_IconLaundry_Partner.html"><img
+              src="./assets/img/App Store.png"
+              alt="img"
+              class="img-fluid ps-lg-2 ps-md-2"
+            /></a>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Modal for Book Now -->
+    <div class="modal fade" id="fabkleanStoreModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Book Your Laundry Service</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Content from the plugin will be injected here -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <script>
+	
+        var timeStamp = new Date().getTime();
+            $(document).ready(function(){$.getScript( "https://app.fabklean.com/js/webstore.js?time="+timeStamp+"" ).done(function( script, textStatus ) { fabStore.view(8583); }).fail(function( jqxhr, settings, exception ) {alert("fabklean plugin is not loaded");});})
+        </script>
+        
+
+    <!-- navbar finish -->
+    <!-- About us Start -->
+    <section class="about_us" id="aboutus">
+      <div class="container">
+        <div class="row align-items-center py-3">
+          <div class="col-md-6 col-lg-6 col-xl-6 about_text ">
+            <div class="about_content">
+              <h2 class="mb-3">About Us: Our Laundry Journey</h2>
+              <p>
+                Embark on a journey through our laundry history, where our
+                commitment to quality, innovative spirit, and unwavering
+                dedication to customers have shaped us into a trusted name in
+                laundry services. Learn more about who we are and our vision for
+                a brighter laundry future.
+              </p>
+              <div class="about_height d-flex">
+                <div class="vl"></div>
+                <p class="ps-2">
+                  Discover our laundry journey, where dedication and innovation
+                  have been the keys to our enduring success.
+                </p>
+              </div>
+              <div class="about_iinement d-flex align-items-center">
+                <img
+                  src="./assets/img/linement.png"
+                  alt="image"
+                  class="img-fluid"
+                />
+                <p class="ps-3 mt-3">A Commitment to Quality</p>
+              </div>
+              <div class="about_iinement d-flex align-items-center">
+                <img
+                  src="./assets/img/linement.png"
+                  alt="image"
+                  class="img-fluid"
+                />
+                <p class="ps-3 mt-3">Team and Expertise</p>
+              </div>
+              <div class="about_iinement d-flex align-items-center">
+                <img
+                  src="./assets/img/linement.png"
+                  alt="image"
+                  class="img-fluid"
+                />
+                <p class="ps-3 mt-3">Customer-Centric Approach</p>
+              </div>
+              <div class="about_iinement d-flex align-items-center">
+                <img
+                  src="./assets/img/linement.png"
+                  alt="image"
+                  class="img-fluid"
+                />
+                <p class="ps-3 mt-3">Sustainability Efforts</p>
+              </div>
+              <div class="about_iinement d-flex align-items-center">
+                <img
+                  src="./assets/img/linement.png"
+                  alt="image"
+                  class="img-fluid"
+                />
+                <p class="ps-3 mt-3">Environmental Initiatives</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-6 about_laundry">
+
+            <div class="about_img">
+              <img src="./assets/img/laundry.png" alt="image" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About us finish -->
+    <!-- why choose start -->
+    <section class="whychooseus" id="why_choose">
+      <div class="container">
+        <div class="row">
+          <div class="choose_heading text-center">
+            <h2 class="my-3">Why Choose Us?</h2>
+            <p class="mb-5">
+              The freedom of choosing your preferred laundry service provider
+              from our list of experts.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-lg-4 col-xl-4">
+            <div class="pickup text-center">
+              <img
+                src="./assets/img/pickup.png"
+                alt="image"
+                class="img-fluid pb-3"
+              />
+              <h4 class="mb-3">Fast Pickup and <br />Delivery</h4>
+              <p>
+                Your Laundry gets picked up and <br />
+                delivered back to your doorstep.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 col-xl-4">
+            <div class="pickup text-center">
+              <img
+                src="./assets/img/dollar.png"
+                alt="image"
+                class="img-fluid pb-3"
+              />
+              <h4 class="mb-3">
+                Affordable <br />
+                Pricing
+              </h4>
+              <p>
+                No additional cost you pay just as <br />
+                same as the price set by your.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 col-xl-4">
+            <div class="pickup text-center">
+              <img
+                src="./assets/img/star.png"
+                alt="image"
+                class="img-fluid pb-3"
+              />
+              <h4 class="mb-3">
+                Qualitys <br />
+                Assurance
+              </h4>
+              <p>
+                We ensure the best quality service <br />
+                in time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- why choose finish -->
+    <!-- laundry service -->
+    <section class="laundry_service" id="laundryservice">
+      <div class="container">
+        <div class="row align-items-center py-4">
+          <div class="col-md-4 col-lg-4 col-xl-4">
+            <div class="laundryheading">
+              <h2 class="text-white">Our <span> Laundry </span>  Services</h2>
+              <p>
+                The Online Laundry Planform in India.. It has partnered up with
+                the top laundry experts of the country and provides you with.
+              </p>
+            </div>
+            <div class="laundry_icon d-flex ">
+              <img src="./assets/img/yellowicon.png" alt="img" class="img-fluid">
+              <p class="text-white ps-lg-5 ps-md-3 ">Wide Range of Services</p>
+            </div>
+            <div class="laundry_icon d-flex ">
+              <img src="./assets/img/yellowicon.png" alt="img" class="img-fluid">
+              <p class="text-white ps-lg-5 ps-md-3 ">Express Service</p>
+            </div>
+            <div class="laundry_icon d-flex ">
+              <img src="./assets/img/yellowicon.png" alt="img" class="img-fluid">
+              <p class="text-white ps-lg-5 ps-md-3 ">Quality Guarantee</p>
+            </div>
+            <div class="laundry_icon d-flex ">
+              <img src="./assets/img/yellowicon.png" alt="img" class="img-fluid">
+              <p class="text-white ps-lg-5 ps-md-3 ">Convenient Pickup and Delivery</p>
+            </div>
+            <div class="laundry_icon d-flex ">
+              <img src="./assets/img/yellowicon.png" alt="img" class="img-fluid">
+              <p class="text-white ps-lg-5 ps-md-3 ">Convenient Pickup and Delivery</p>
+            </div>
+            <div class="laundry_icon d-flex ">
+              <img src="./assets/img/yellowicon.png" alt="img" class="img-fluid">
+              <p class="text-white ps-lg-5 ps-md-3 ">Personalized Care</p>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-8 col-xl-8">
+              <div class="row pt-4">
+                <div class="col-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="washfold text-center bg-dark p-3 rounded">
+                    <img src="./assets/img/washfold.png" alt="image" class="img-fluid pb-4">
+                    <h5 class="text-white">Wash & Fold</h5>
+                  </div>
+                </div>
+                <div class=" col-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="washfold text-center bg-dark p-3 rounded">
+                    <img src="./assets/img/Iron.png" alt="image" class="img-fluid pb-4">
+                    <h5 class="text-white">Ironing</h5>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="washfold text-center bg-dark p-3 rounded">
+                    <img src="./assets/img/Clothes.png" alt="image" class="img-fluid pb-4">
+                    <h5 class="text-white">Dry Clean</h5>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="washfold text-center bg-dark p-3 rounded">
+                    <img src="./assets/img/Carpet.png" alt="image" class="img-fluid pb-4">
+                    <h5 class="text-white">Carpet</h5>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="washfold text-center bg-dark p-3 rounded">
+                    <img src="./assets/img/Shoes.png" alt="image" class="img-fluid pb-4">
+                    <h5 class="text-white">Sepatu & Tas</h5>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="washfold text-center bg-dark p-3 rounded">
+                    <img src="./assets/img/kasur.png" alt="image" class="img-fluid pb-4">
+                    <h5 class="text-white">Kasur</h5>
+                  </div>
+                </div>
+              </div>
+              
+              
+              
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- laundry service -->
+
+    <!-- Request services start -->
+      <section class="request_services" id="requestservice">
+        <div class="container-fluid px-0">
+          <div class="row">
+            <div class="col-md-12 col-lg-6 col-xl-6">
+              <div class="request_img">
+                <img src="./assets/img/Request.png" alt="image" Class=" img-fluid">
+              </div>
+
+            </div>
+            <div class="col-md-12 col-lg-6 col-xl-6">
+              <div class="request_form p-lg-5 ">
+                  <h2>Request for a service</h2>
+                  <p>The freedom of choosing your preferred laundry service provider from our list of experts.</p>
+                <form>
+                  <div class="form-group">
+                    <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Name">
+                  </div>
+                  <div class="row pt-2">
+                    <div class="col-md-6 col-lg-6 col-xl-6">
+                      <div class="form-group">
+                        <input type="name" class="form-control" id="country" aria-describedby="emailHelp" placeholder="country">
+                      </div>
+
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-6">
+                      <div class="form-group">
+                        <input type="name" class="form-control" id="state" aria-describedby="emailHelp" placeholder="state">
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="row pt-2">
+                    <div class="col-md-6 col-lg-6 col-xl-6">
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="email">
+                      </div>
+
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-6">
+                      <div class="form-group">
+                        <input type="number" class="form-control" id="number" aria-describedby="emailHelp" placeholder="Phone Number">
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="text_area pt-2">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message"></textarea>
+                  </div>
+                  <button class=" btn text-white px-4 form_submit">submit</button>
+
+
+                </form>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+    <!-- Request service finish -->
+    <footer class="footer_nav py-5" id="footernav">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-lg-3 col-xl-3">
+            <div class="quicklink pb-2">
+              <h5 class=" text-white">QUICK LINKS</h5>
+            </div>
+            <div class="quick_link">
+              <ul>
+                <li>
+                  <a href="#">About Us</a>
+                </li>
+                <li>
+                  <a href="#">Why us?</a>
+                </li>
+                  <li><a href="#">Our Services</a></li>
+                  <li> <a href="#">contact us</a></li>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 col-xl-3">
+            <div class="contact_info pb-2">
+              <h5 class="text-white">CONTACT INFO</h5>
+            </div>
+            <div class="contact_link">
+              <ul class="ps-0">
+                <li>
+                  <a href="support@iconlaundry.in"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"></path></svg> <span class="ps-lg-3 ps-md-0">support@iconlaundry.in</span></a> 
+
+                </li>
+                <li><a href="https://wa.me/9637764191/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"></path><path d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.086-1.391l-4.064-3.696z"></path></svg> <span class="ps-lg-3 ps-md-0">+91 9775786789</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 col-xl-3">
+            <div class="social_link pb-2">
+              <h5 class="text-white">CONNECT WITH US!</h5>
+            </div>
+            <div class="sociallinkitem">
+              <a href="https://www.facebook.com/iconlaundry"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path></svg></a>
+              <a href="https://instagram.com/iconlaundry"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg></a>
+            <a href="https://www.youtube.com/@iconlaundry"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"></path></svg></a>
+            <a href="https://www.linkedin.com/company/98815399/admin/feed/posts/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><circle cx="4.983" cy="5.009" r="2.188"></circle><path d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"></path></svg></a>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 col-xl-3">
+            <div class="download_app pb-2">
+              <h5 class="text-white">DOWNLOAD THE APP</h5>
+            </div>
+            <div class="download_icon">
+              <a href="https://play.google.com/store/apps/details?id=com.iawebtech.iconlaundry"> <img src="./assets/img/Play Store.png" alt="icon" class="img-fluid "></a>
+             <a href="#"><img src="./assets/img/App Store.png" alt="icon" class="img-fluid ps-lg-3 ps-md-2 "></a>
+              
+
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+          
+    </footer>
+    <div class="pureend text-center py-2">
+            <h4>© 2022, Icon Laundry Powered by</h4>
+     </div>
+
+    <!-- bootstrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
