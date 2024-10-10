@@ -33,7 +33,7 @@ export default function AboutUs() {
           transition={{ duration: 0.5 }}
         >
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-[#206d73] mb-6"
+            className="text-4xl md:text-5xl font-bold text-[#091271] mb-6"
             variants={{
               hidden: { opacity: 0, scale: 0.9 },
               visible: { opacity: 1, scale: 1 }
@@ -43,7 +43,7 @@ export default function AboutUs() {
             About Icon Laundry
           </motion.h2>
           <motion.div 
-            className="w-24 h-1 bg-[#206d73] mx-auto mb-10"
+            className="w-24 h-1 bg-[#091271] mx-auto mb-10"
             variants={{
               hidden: { width: 0 },
               visible: { width: 96 }
@@ -102,12 +102,12 @@ export default function AboutUs() {
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
-                    <feature.icon className="w-12 h-12 text-[#206d73]" />
-                    <span className="text-sm font-semibold text-[#206d73] bg-[#e6f3f4] px-3 py-1 rounded-full">
+                    <feature.icon className="w-12 h-12 text-[#091271]" />
+                    <span className="text-sm font-semibold text-[#091271] bg-[#e6e8f4] px-3 py-1 rounded-full">
                       {feature.highlight}
                     </span>
                   </motion.div>
-                  <h3 className="text-2xl font-semibold text-[#206d73] mb-4">{feature.title}</h3>
+                  <h3 className="text-2xl font-semibold text-[#091271] mb-4">{feature.title}</h3>
                   <p className="text-gray-600 text-lg">{feature.description}</p>
                 </motion.div>
               ))}
@@ -123,7 +123,7 @@ export default function AboutUs() {
             >
               <motion.a 
                 href="#" 
-                className="inline-flex items-center text-lg text-[#206d73] font-semibold hover:underline"
+                className="inline-flex items-center text-lg text-[#091271] font-semibold hover:underline"
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >

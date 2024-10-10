@@ -15,8 +15,8 @@ export default function AppPromotion() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-[#206d73]">
-              Revolutionize Your <span className="text-[#0d4d52]">Laundry</span>{" "}
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-[#091271]">
+              Revolutionize Your <span className="text-[#060c4d]">Laundry</span>{" "}
               Experience
             </h2>
             <p className="text-xl mb-8 text-gray-600">
@@ -36,12 +36,12 @@ export default function AppPromotion() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
                 >
-                  <item.icon className="w-6 h-6 text-[#206d73] mr-3" />
+                  <item.icon className="w-6 h-6 text-[#091271] mr-3" />
                   <span>{item.text}</span>
                 </motion.li>
               ))}
             </ul>
-            <div className="w-20 h-1 bg-[#206d73] mb-8"></div>
+            <div className="w-20 h-1 bg-[#091271] mb-8"></div>
             <p className="text-center mb-6">
               Available on Play Store and iOS App Store
             </p>
@@ -79,7 +79,7 @@ export default function AppPromotion() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-[#0d4d52] rounded-3xl transform rotate-3 opacity-90" />
+              <div className="absolute inset-0 bg-[#383b66] rounded-3xl transform rotate-3 opacity-90" />
               <Image
                 src="https://iconlaundry.in/assets/img/banner_img.png"
                 alt="Icon Laundry App"
@@ -88,7 +88,7 @@ export default function AppPromotion() {
                 className="rounded-3xl shadow-2xl relative z-10 transform -rotate-3"
               />
               <motion.div
-                className="absolute -bottom-6 -right-6 bg-[#206d73] text-white px-6 py-3 rounded-full font-semibold shadow-lg z-20"
+                className="absolute -bottom-6 -right-6 bg-[#091271] text-white px-6 py-3 rounded-full font-semibold shadow-lg z-20"
                 whileHover={{ scale: 1.05, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
               >

@@ -55,7 +55,7 @@ body {
 /* navbar start */
 
 .menubar {
-  background: linear-gradient(144.89deg, #206d73 -3.68%, #020808 99.03%);
+  background: linear-gradient(144.89deg, #091271 -3.68%, #020808 99.03%);
 
   padding: absolute;
 }
@@ -71,7 +71,7 @@ body {
 
   right: 0;
 
-  background: linear-gradient(144.89deg, #206d73 -3.68%, #020808 100%);
+  background: linear-gradient(144.89deg, #091271 -3.68%, #020808 100%);
 
   z-index: 99;
 }
@@ -100,7 +100,7 @@ body {
 /* headerbanner Start */
 
 .header_banner {
-  background: linear-gradient(144.89deg, #206d73 -3.68%, #020808 99.03%);
+  background: linear-gradient(144.89deg, #091271 -3.68%, #020808 99.03%);
 }
 
 .banner_img img {
@@ -200,7 +200,7 @@ body {
 /* laundry service start */
 
 .laundry_service {
-  background: linear-gradient(144.89deg, #206d73 -3.68%, #020808 99.03%);
+  background: linear-gradient(144.89deg, #091271 -3.68%, #020808 99.03%);
 }
 
 .laundryheading h2 {

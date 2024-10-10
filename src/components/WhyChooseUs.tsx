@@ -70,10 +70,10 @@ export default function WhyChooseUs() {
           animate={isInView ? "visible" : "hidden"}
           variants={itemVariants}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#206d73] mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-[#091271] mb-8 md:mb-12">
             Why Choose Icon Laundry?
           </h2>
-          <div className="w-24 h-1 bg-[#206d73] mx-auto mb-10"></div>
+          <div className="w-24 h-1 bg-[#091271] mx-auto mb-10"></div>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Experience the difference with our premium laundry services. We
             combine cutting-edge technology with eco-friendly practices to
@@ -95,9 +95,9 @@ export default function WhyChooseUs() {
             >
               <div className="flex items-center mb-6">
                 <div className="bg-white rounded-full p-4 mr-6">
-                  <reason.icon className="w-10 h-10 text-[#206d73]" />
+                  <reason.icon className="w-10 h-10 text-[#091271]" />
                 </div>
-                <h3 className="text-2xl font-semibold text-[#206d73]">
+                <h3 className="text-2xl font-semibold text-[#091271]">
                   {reason.title}
                 </h3>
               </div>
@@ -112,7 +112,7 @@ export default function WhyChooseUs() {
           animate={isInView ? "visible" : "hidden"}
           variants={itemVariants}
         >
-          <h3 className="text-3xl font-bold text-[#206d73] mb-10">
+          <h3 className="text-3xl font-bold text-[#091271] mb-10">
             Our Commitment to Excellence
           </h3>
           <div className="relative w-full h-80 md:h-[500px] rounded-lg overflow-hidden">
@@ -123,23 +123,27 @@ export default function WhyChooseUs() {
               objectFit="cover"
               className="rounded-lg"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#206d73] to-transparent opacity-50"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#091271] to-transparent opacity-50"></div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <motion.div 
+              <motion.div
                 className="bg-white bg-opacity-80 p-8 rounded-lg shadow-xl max-w-2xl"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
-                <svg className="w-12 h-12 text-[#206d73] mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                <svg
+                  className="w-12 h-12 text-[#091271] mx-auto mb-4"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <p className="text-2xl md:text-3xl font-semibold mb-6 text-[#206d73] italic">
-                  We&apos;re not just cleaning clothes; we&apos;re caring for your wardrobe
-                  with precision and passion.
+                <p className="text-2xl md:text-3xl font-semibold mb-6 text-[#091271] italic">
+                  We&apos;re not just cleaning clothes; we&apos;re caring for
+                  your wardrobe with precision and passion.
                 </p>
-                <motion.button 
-                  className="bg-[#206d73] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#184f54] transition-colors shadow-lg"
+                <motion.button
+                  className="bg-[#091271] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#424674] transition-colors shadow-lg"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
