@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-12" id="footernav">
+    <footer className="bg-[#2d315e] text-white py-12" id="footernav">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -20,7 +20,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#aboutus"
-                  className="hover:text-[#091271] transition-colors"
+                  className="hover:text-[#121316] transition-colors"
                 >
                   About Us
                 </Link>
@@ -28,7 +28,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#why_choose"
-                  className="hover:text-[#091271] transition-colors"
+                  className="hover:text-[#000000] transition-colors"
                 >
                   Why us?
                 </Link>
@@ -36,7 +36,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#laundryservice"
-                  className="hover:text-[#091271] transition-colors"
+                  className="hover:text-[#000000] transition-colors"
                 >
                   Our Services
                 </Link>
@@ -44,7 +44,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#requestservice"
-                  className="hover:text-[#091271] transition-colors"
+                  className="hover:text-[#000000] transition-colors"
                 >
                   Contact Us
                 </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:support@iconlaundry.in"
-                  className="flex items-center hover:text-[#091271] transition-colors"
+                  className="flex items-center hover:text-[#000000] transition-colors"
                 >
                   <Mail size={20} className="mr-2" />
                   <span>support@iconlaundry.in</span>
@@ -66,7 +66,7 @@ export default function Footer() {
               <li>
                 <a
                   href="https://wa.me/9637764191/"
-                  className="flex items-center hover:text-[#091271] transition-colors"
+                  className="flex items-center hover:text-[#000000] transition-colors"
                 >
                   <MessageCircle size={20} className="mr-2" />
                   <span>+91 7757867896</span>
@@ -75,7 +75,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+91 7757867896"
-                  className="flex items-center hover:text-[#091271] transition-colors"
+                  className="flex items-center hover:text-[#000000] transition-colors"
                 >
                   <Phone size={20} className="mr-2" />
                   <span>+91 7757867896</span>
@@ -88,25 +88,25 @@ export default function Footer() {
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/iconlaundry"
-                className="hover:text-[#091271] transition-colors"
+                className="hover:text-[#000000] transition-colors"
               >
                 <Facebook size={24} />
               </a>
               <a
                 href="https://instagram.com/iconlaundry"
-                className="hover:text-[#091271] transition-colors"
+                className="hover:text-[#000000] transition-colors"
               >
                 <Instagram size={24} />
               </a>
               <a
                 href="https://www.youtube.com/@iconlaundry"
-                className="hover:text-[#091271] transition-colors"
+                className="hover:text-[#000000] transition-colors"
               >
                 <Youtube size={24} />
               </a>
               <a
                 href="https://www.linkedin.com/company/98815399/admin/feed/posts/"
-                className="hover:text-[#091271] transition-colors"
+                className="hover:text-[#000000] transition-colors"
               >
                 <Linkedin size={24} />
               </a>
