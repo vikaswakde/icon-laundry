@@ -45,29 +45,33 @@ export default function AppPromotion() {
             <p className="text-center mb-6">
               Available on Play Store and iOS App Store
             </p>
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 items-center">
               <a
                 href="https://play.google.com/store/apps/details?id=app.iawebtech.iconlaundry&hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-[195px] h-[70px]"
               >
                 <Image
                   src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
                   alt="Get it on Google Play"
                   width={200}
                   height={60}
+                  className="w-full h-full object-contain"
                 />
               </a>
               <a
                 href="https://play.google.com/store/apps/details?id=app.iawebtech.iconlaundry&hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
+                className=" h-[50px] mt-10"
               >
                 <Image
                   src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
                   alt="Download on the App Store"
                   width={200}
                   height={60}
+                  className="w-full h-full object-contain"
                 />
               </a>
             </div>
