@@ -43,9 +43,23 @@ export default function Header() {
           formContainer.style.transform = "translate(-50%, -50%)";
           formContainer.style.zIndex = "9999";
           formContainer.style.maxWidth = "90%";
-          formContainer.style.maxHeight = "90%";
+          formContainer.style.maxHeight = "90vh";
+          formContainer.style.height = "90vh";
           formContainer.style.overflow = "auto";
-          formContainer.style.height = "20rem";
+
+          // Add the new styles for the modal body and iframe
+          const modalBody = formContainer.querySelector(".modal-body");
+          if (modalBody instanceof HTMLElement) {
+            modalBody.style.padding = "0px";
+            modalBody.style.lineHeight = "100%";
+            modalBody.style.height = "42rem";
+
+            const iframe = modalBody.querySelector("iframe");
+            if (iframe instanceof HTMLIFrameElement) {
+              iframe.style.width = "100%";
+              iframe.style.height = "93%";
+            }
+          }
         }
       } else {
         console.error("fabklean plugin is not loaded");
